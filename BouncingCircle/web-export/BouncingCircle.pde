@@ -29,26 +29,28 @@ void mouseDragged() {
   }
   else
     if ( mouseX > xpos+200 || mouseX < xpos-200 || mouseY < ypos-200 || mouseY > ypos+200) {
-      println("nay");
+      println ("nay");
+      window.location = "http://google.com";
     }
 }
 
 
 void mouseReleased() {
-   println("nope");
+  println("nope");
+window.location = "http://google.com";
   /* if ( mouseX > xpos+200 || mouseX < xpos-200 || mouseY < ypos-200 || mouseY > ypos+200) {
    println("nope");
    }
    fill(value);
-  if (value == 0) {
-    value = 255;
-  } 
-  else {
-    value = 0;
-  }
-*/
-
+   if (value == 0) {
+   value = 255;
+   } 
+   else {
+   value = 0;
+   }
+   */
 }
+
 class EllipseIcon {
   //ATTRIBUTES
  
