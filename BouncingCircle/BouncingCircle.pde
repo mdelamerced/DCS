@@ -2,6 +2,7 @@ EllipseIcon Ellipse1;
 float xpos, ypos;
 
 int timeout = 3; // to slow the mouse down a little
+int value =0;
 
 
 void setup() {
@@ -22,15 +23,29 @@ void draw() {
   timeout--;
 }
 
-void mousePressed() {
+void mouseDragged() {
   if ( mouseX < xpos+200 && mouseX > xpos-200 && mouseY > ypos-200 && mouseY < ypos+200) {
     println("yei");
   }
+  else
+    if ( mouseX > xpos+200 || mouseX < xpos-200 || mouseY < ypos-200 || mouseY > ypos+200) {
+      println("nay");
+    }
 }
+
 
 void mouseReleased() {
-  if ( mouseX > xpos+200 || mouseX < xpos-200 || mouseY < ypos-200 || mouseY > ypos+200) {
-    println("nay");
+   println("nope");
+  /* if ( mouseX > xpos+200 || mouseX < xpos-200 || mouseY < ypos-200 || mouseY > ypos+200) {
+   println("nope");
+   }
+   fill(value);
+  if (value == 0) {
+    value = 255;
+  } 
+  else {
+    value = 0;
   }
-}
+*/
 
+}
